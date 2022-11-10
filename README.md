@@ -84,4 +84,8 @@ Fruit Tree
 
 5. Passing parameters in routers.
 
-6. Passing a request with a payload body.
+6. Passing a request with a payload body. Add a POST route.
+
+7. Passing query parameteres in routes.
+
+8. Validating route parameters.

@@ -18,7 +18,7 @@ export class Tree {
     @Column()
     age: number;
 
-    @Column()
+    @Column({ default: false })
     isEndangered: boolean;
 }
 

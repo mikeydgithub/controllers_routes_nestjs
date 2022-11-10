@@ -4,6 +4,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+
+import { CreateTreeDTO } from 'src/trees/dto/create-tree.dto';
+import { TreeFilterOptions } from './interfaces/filters'
 import { Tree } from './tree.entity';
 
 // Injectable: Decorator that marks a class as a provider. Providers can be injected into other classes via constructor parameter injection using Nest's built-in Dependency Injection (DI) system.
@@ -17,14 +20,22 @@ export class TreeService {
         private treeRepository: Repository<Tree>,
     ) {}
 
-    findAll(): Promise <Tree[]> {
-        return this.treeRepository.find();
+    findAll(filters: TreeFilterOptions): Promise <Tree[]> {
+        return this.treeRepository.find({
+            where: {
+                isEndangered: filters.isEndangered,
+            },
+        });
     }
 
     findOne(id: number): Promise<Tree> {
         return this.treeRepository.findOneBy({ id });
     }
 
+    create(payload: CreateTreeDTO): Promise<Tree> {
+        return this.treeRepository.save(payload);
+    }
+    
     async deleteById(id: number): Promise<void> {
         await this.treeRepository.delete(id);
     }
