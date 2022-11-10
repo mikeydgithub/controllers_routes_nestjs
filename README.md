@@ -71,3 +71,11 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+1. Creating our own NestJS routes and controllers.
+
+2. Setting up the database ORM. MySQL and ORM for retrieving and updating data.
+
+3. Creating our Tree entity and TreeService.
+
+4. Defining routes and controllers.
