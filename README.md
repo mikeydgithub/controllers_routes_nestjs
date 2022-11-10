@@ -72,10 +72,16 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 
+Fruit Tree
+
 1. Creating our own NestJS routes and controllers.
 
 2. Setting up the database ORM. MySQL and ORM for retrieving and updating data.
 
 3. Creating our Tree entity and TreeService.
 
-4. Defining routes and controllers.
+4. Defining routes and controllers. Don't forget to resiter the controller in the module.
+
+5. Passing parameters in routers.
+
+6. Passing a request with a payload body.
