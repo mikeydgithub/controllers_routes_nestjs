@@ -7,7 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [
     // create TypeOrmModule.forRoot objects in imports array
-    // type, host, port, username, password, database, enetites, and 
+    // type, host, port, username, password, database, enetites, and
     // synchronize
     TypeOrmModule.forRoot({
       type: 'mysql',
